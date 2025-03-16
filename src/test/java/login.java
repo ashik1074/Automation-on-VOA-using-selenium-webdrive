@@ -16,15 +16,15 @@ public class login {
     @Test
     void voaNavigate(){
         driver.manage().window().maximize();
-        driver.get("http://113.11.21.65:8105/visa/applications");
+        driver.get("http://voa/visa/applications");
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         WebElement username = wait.until(ExpectedConditions.presenceOfElementLocated(By.name("username")));
-        username.sendKeys("neonraj@gmail.com");
+        username.sendKeys("voa@gmail.com");
 
         WebElement password = driver.findElement(By.name("password"));
-        password.sendKeys("1234");
+        password.sendKeys("****");
 
         WebElement loginButton = driver.findElement(By.xpath("/html/body/div/div/div[4]/div[1]/form/div/input"));
         loginButton.click();
